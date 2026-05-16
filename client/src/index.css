@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6c63ff;
+  --primary-dark: #4b44cc;
+  --secondary: #0f0c29;
+  --bg: #0a0a1a;
+  --bg-card: #13132b;
+  --bg-input: #1a1a35;
+  --text: #f0f0ff;
+  --text-muted: #8888aa;
+  --border: #2a2a4a;
+  --success: #00d4aa;
+  --error: #ff4d6d;
+  --gradient: linear-gradient(135deg, #6c63ff, #a855f7);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }

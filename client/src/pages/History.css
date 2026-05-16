@@ -1,0 +1,129 @@
+.history-container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.history-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.1s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.history-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.history-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.history-meta {
+    display: flex;
+    gap: 8px;
+}
+
+.history-category {
+    background: rgba(108, 99, 255, 0.15);
+    color: var(--primary);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.history-subcategory {
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.history-date {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.history-prompt {
+    color: var(--text);
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.history-response {
+    background: var(--bg-input);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 14px;
+    animation: fadeIn 0.3s ease;
+}
+
+.history-response.rtl,
+.history-response.rtl * {
+    direction: rtl;
+    text-align: right;
+}
+
+.expand-hint {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--text-muted);
+}
+
+.empty-state span {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 16px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.loading-state {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.spinner-large {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

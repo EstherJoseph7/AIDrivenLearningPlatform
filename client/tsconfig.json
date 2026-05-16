@@ -1,0 +1,19 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "target": "es5", 
+    "module": "commonjs", 
+    "jsx": "react-jsx", 
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

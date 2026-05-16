@@ -1,0 +1,210 @@
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 16px;
+}
+
+.auth-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.auth-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 28px 32px;
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.logo-icon {
+    font-size: 24px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.auth-logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.auth-subtitle {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: var(--text);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+}
+
+.form-group select option {
+    background: var(--bg-card);
+}
+
+.btn-primary {
+    background: var(--gradient);
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.2s, transform 0.1s;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+}
+
+.btn-primary:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error-msg {
+    color: var(--error);
+    font-size: 13px;
+    background: rgba(255, 77, 109, 0.1);
+    border: 1px solid rgba(255, 77, 109, 0.2);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+}
+
+.admin-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.admin-checkbox input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.admin-checkbox label {
+    font-size: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding-right: 44px;
+}
+
+.eye-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.eye-btn:hover {
+    color: var(--text);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

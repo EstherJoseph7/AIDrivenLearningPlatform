@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": "./Project/src",
+    "jsx": "react",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["./Project/src/**/*"]
+}
